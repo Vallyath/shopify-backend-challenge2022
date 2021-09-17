@@ -1,6 +1,8 @@
 Hi! This is my Shopify Backend Coding Challenge 
 
-PRESUMPTIONS: Python and virtualenv are already installed, PostgreSQL also already available to use.
+PRESUMPTIONS: 
+    - python and virtualenv are already installed
+    - postgreSQL also already available to use and started
 
 1.  Activate your python virtualenv 
 2.  If your terminal is where the requirements.txt exists, 
@@ -13,14 +15,17 @@ PRESUMPTIONS: Python and virtualenv are already installed, PostgreSQL also alrea
     for example mine was: '/home/vallyath/shopify-backend-2022/uploads', and then change the path for
     app.config['SQLALCHEMY_DATABASE_URI'], the format is postgresql://[user[:password]@][netloc][:port][/dbname][?param1=value1&...]
     for example mine is "postgresql://postgres:putyourdbpasswordhere@localhost:5432/images_api". The default postgres 
-    password is "postgres".
+    password is "postgres" and the default postgres port is 5432.
 5.  Next, you will have to run the following commands in terminal in order:
     1. export FLASK_APP=backend
     2. flask db init
     3. flask db migrate
     4. flask db upgrade
 6.  Afterwards, you can finally run the backend python script, I have chosen for it to run on 0.0.0.0 because the default
-    web address for flask doesn't work on WSL, then you can use the test.py I have provided to send requests into the server.
+    web address for flask doesn't work on WSL. 
+7.  Finally, you can use the test.py I have provided to send requests into the server. First you'd need to change the local server url
+    to match what the flask server is running on. For example, mine was (ipaddress):5000/ and as such should be changed according to what
+    is 
 
 Thank you for checking out my code!
 

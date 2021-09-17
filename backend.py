@@ -28,8 +28,8 @@ app = Flask(__name__)
 
 #setup for folder, database and validating filenames
 #'path/to/upload/folder/on/pc'
-app.config['UPLOAD'] = '/home/vallyath/shopify-backend-2022/uploads'
-app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:movies@localhost:5432/images_api"
+app.config['UPLOAD'] = 'path/to/upload/folder/on/pc' #CHANGE
+app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://postgres:yourdbpasswordhere@localhost:5432/images_api" #CHANGE
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['VALID_FILENAMES'] = ['jpg', 'jpeg', 'png', 'gif']
 
