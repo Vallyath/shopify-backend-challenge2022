@@ -68,7 +68,7 @@ def upload():
         new_image = Image(filename, location, tags)
         db.session.add(new_image)
         db.session.commit()
-        return "Picture received and stored!", 201
+        return "Picture received and stored!", 200
 
 """
 This is the delete route for anyone to delete a picture from the repository.
@@ -87,7 +87,7 @@ def delete():
     location = os.path.join(app.config['UPLOAD'], filename)
     if os.path.exists(location):
         os.remove(location)
-        return "Picture deleted!", 201
+        return "Picture deleted!", 200
     else:
         return "Couldn't find the filename.", 400
 
